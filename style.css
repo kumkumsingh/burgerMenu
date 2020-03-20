@@ -1,9 +1,12 @@
 body{
-    background: #272727;
+    background-image: url(Beach.png);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-repeat: no-repeat ;
+    background-size: cover;
+
 }
 
 .menu-btn{
@@ -40,4 +43,14 @@ body{
 }
 .menu-btn-burger::before{
     transform: translateY(-16px);
+}
+.menu-btn.open .menu-btn-burger{
+    transform: translateX(-50px);
+    background: transparent;
+}
+.menu-btn.open .menu-btn-burger::before{
+    transform: rotate(45deg) translate(35px, -35px)
+}
+.menu-btn.open .menu-btn-burger::after{
+    transform: rotate(-45deg) translate(35px, 35px)
 }
